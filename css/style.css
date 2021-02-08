@@ -75,11 +75,24 @@ main{
     border-radius: 2rem;
 }
 
+a { color: inherit; } 
+
+.contact-icons{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contact-icons div > span > a > i {
+    cursor: pointer;
+}
+
 .link{
     display: flex;
     margin: 2rem 0rem;
     padding: 1rem 5rem;
     align-items: center;
+    cursor: pointer;
 }
 
 .link h2{
@@ -109,8 +122,8 @@ main{
 }
 
 .image-chopper{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
