@@ -1,4 +1,4 @@
-const timeIntervel = 1000 * 60 * 10; // check every 10 mins
+const timeIntervel = 1000 * 60 * 1; // check every 1 mins
 
 function changeBackground(){
     const hours = new Date().getHours();
@@ -21,8 +21,18 @@ function changeBackground(){
     
 }
 
+
+
 setInterval(() => changeBackground(), timeIntervel);
 
 $(document).ready(function(){
     changeBackground();
+    $('.link').click(function(){
+        id  = $(this).attr('id');
+        $('.main-content').children('div').each(function(){
+            $(this).addClass('display-none');
+        });
+        $('*[data-model="'+id+'"]').removeClass('display-none');
+    
+    });
 });
